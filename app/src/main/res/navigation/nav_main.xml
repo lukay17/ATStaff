@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.lega.atstaff.ui.fragment.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.lega.atstaff.ui.fragment.DetailFragment"
+        android:label="DetailFragment"
+        tools:layout="@layout/fragment_detail">
+
+        <argument
+            android:name="personal"
+            app:argType="com.lega.atstaff.domain.models.Personal" />
+
+        <action
+            android:id="@+id/to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/to_updateFragment"
+            app:destination="@id/updateFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.lega.atstaff.ui.fragment.UpdateFragment"
+        android:label="fragment_update"
+        tools:layout="@layout/fragment_update" >
+
+        <argument
+            android:name="personal"
+            app:argType="com.lega.atstaff.domain.models.Personal" />
+        <action
+            android:id="@+id/to_detailFragment"
+            app:destination="@id/detailFragment" />
+
+
+    </fragment>
+</navigation>

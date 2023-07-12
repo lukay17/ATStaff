@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="com.lega.atstaff.ui.vm.UpdateViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/blinker"
+                android:text="@string/updatePersonal"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="50dp"
+                android:textSize="30dp"
+                android:textColor="@color/primary"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/blinker"
+                android:text="@string/id"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="50dp"
+                android:textSize="15dp"
+                android:textColor="@color/primary"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/input_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:hint="@string/hintName"
+                android:fontFamily="@font/blinker"
+                android:text="@={viewModel.id}"
+                android:textSize="18dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/blinker"
+                android:text="@string/name"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15dp"
+                android:textColor="@color/primary"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/input_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:hint="@string/hintName"
+                android:fontFamily="@font/blinker"
+                android:text="@={viewModel.name}"
+                android:textSize="18dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/blinker"
+                android:text="@string/dni"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15dp"
+                android:textColor="@color/primary"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/input_dni"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:hint="@string/hintDni"
+                android:fontFamily="@font/blinker"
+                android:text="@={viewModel.dni}"
+                android:textSize="18dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/blinker"
+                android:text="@string/nationality"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15dp"
+                android:textColor="@color/primary"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/input_nationality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:hint="@string/hintNationality"
+                android:fontFamily="@font/blinker"
+                android:text="@={viewModel.nationality}"
+                android:textSize="18dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/blinker"
+                android:text="@string/organization"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15dp"
+                android:textColor="@color/primary"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/input_organization"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:hint="@string/hintOrganization"
+                android:fontFamily="@font/blinker"
+                android:text="@={viewModel.organization}"
+                android:textSize="18dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/blinker"
+                android:text="@string/position"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15dp"
+                android:textColor="@color/primary"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/input_position"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:hint="@string/hintPosition"
+                android:fontFamily="@font/blinker"
+                android:text="@={viewModel.position}"
+                android:textSize="18dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/blinker"
+                android:text="@string/twitter"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15dp"
+                android:textColor="@color/primary"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/input_twitter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:hint="@string/hintTwitter"
+                android:fontFamily="@font/blinker"
+                android:text="@={viewModel.twitter}"
+                android:textSize="18dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/blinker"
+                android:text="@string/facebook"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15dp"
+                android:textColor="@color/primary"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/input_facebook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:hint="@string/hintFacebook"
+                android:fontFamily="@font/blinker"
+                android:text="@={viewModel.facebook}"
+                android:textSize="18dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/blinker"
+                android:text="@string/LinkedIn"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15dp"
+                android:textColor="@color/primary"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/input_linkedin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:hint="@string/hintLinkedIn"
+                android:fontFamily="@font/blinker"
+                android:text="@={viewModel.linkedin}"
+                android:textSize="18dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/blinker"
+                android:text="@string/phone"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15dp"
+                android:textColor="@color/primary"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/input_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:hint="@string/hintPhone"
+                android:fontFamily="@font/blinker"
+                android:text="@={viewModel.phone}"
+                android:textSize="18dp"
+                />
+
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/blinker"
+                android:background="@drawable/buttom_staff"
+                android:layout_marginTop="20dp"
+                android:text="Update"
+                android:textAllCaps="false"
+                android:textSize="18dp"
+                android:onClick="@{()->viewModel.updateProfile()}"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/register_icon"
+                android:theme="@style/Staff_Button"
+                android:textColor="@color/white"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/staff" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/back_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/blinker"
+                    android:text="@string/returDetail"
+                    android:textSize="18dp"
+                    android:textColor="@color/secundary"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>

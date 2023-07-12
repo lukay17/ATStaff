@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "304441376263",
+    "project_id": "atstaff-e521f",
+    "storage_bucket": "atstaff-e521f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304441376263:android:1017670250eb5cc05bf4a2",
+        "android_client_info": {
+          "package_name": "com.lega.atstaff"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "304441376263-h42p607n419rhk8m1rklohjul5po183p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lega.atstaff",
+            "certificate_hash": "78a9566747224455593c8528beeca2dd5d772faf"
+          }
+        },
+        {
+          "client_id": "304441376263-h14uofl87vhuqs3alruv0f1b8pm60a8n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuAauYVfBII9OqaQhwVF1CXJm4xwtG99o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "304441376263-h14uofl87vhuqs3alruv0f1b8pm60a8n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

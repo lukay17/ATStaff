@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_login"
+    app:startDestination="@id/waitFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.lega.atstaff.ui.fragment.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/to_waitFragment"
+            app:destination="@id/waitFragment" />
+        <action
+            android:id="@+id/to_homeActivity"
+            app:destination="@id/homeActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.lega.atstaff.ui.fragment.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/to_waitFragment"
+            app:destination="@id/waitFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/waitFragment"
+        android:name="com.lega.atstaff.ui.fragment.WaitFragment"
+        android:label="fragment_wait"
+        tools:layout="@layout/fragment_wait" >
+
+        <action
+            android:id="@+id/to_loginFragment"
+            app:destination="@id/loginFragment" />
+
+        <action
+            android:id="@+id/to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/to_homeActivity"
+            app:destination="@id/homeActivity" />
+
+    </fragment>
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.lega.atstaff.ui.activity.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home">
+
+        <argument
+            android:name="user"
+            app:argType="com.lega.atstaff.domain.models.User"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </activity>
+</navigation>

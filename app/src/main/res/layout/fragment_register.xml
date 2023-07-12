@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="com.lega.atstaff.ui.vm.RegisterViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/blinker"
+            android:text="@string/signup"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="50dp"
+            android:textSize="30dp"
+            android:textColor="@color/primary"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/blinker"
+            android:text="@string/name"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="50dp"
+            android:textSize="15dp"
+            android:textColor="@color/primary"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/input_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:hint="@string/hintName"
+            android:fontFamily="@font/blinker"
+            android:text="@={viewModel.name}"
+            android:textSize="18dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/blinker"
+            android:text="@string/organization"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="20dp"
+            android:textSize="15dp"
+            android:textColor="@color/primary"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/input_organization"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:hint="@string/hintOrganization"
+            android:fontFamily="@font/blinker"
+            android:text="@={viewModel.organization}"
+            android:textSize="18dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/blinker"
+            android:text="@string/nationality"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="20dp"
+            android:textSize="15dp"
+            android:textColor="@color/primary"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/input_nationality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:hint="@string/hintNationality"
+            android:fontFamily="@font/blinker"
+            android:text="@={viewModel.nationality}"
+            android:textSize="18dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/blinker"
+            android:text="@string/email"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="20dp"
+            android:textSize="15dp"
+            android:textColor="@color/primary"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:hint="@string/hintEmail"
+            android:fontFamily="@font/blinker"
+            android:text="@={viewModel.email}"
+            android:textSize="18dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/blinker"
+            android:text="@string/user"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="20dp"
+            android:textSize="15dp"
+            android:textColor="@color/primary"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/input_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:hint="@string/hintUser"
+            android:fontFamily="@font/blinker"
+            android:text="@={viewModel.username}"
+            android:textSize="18dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/blinker"
+            android:text="@string/password"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="20dp"
+            android:textSize="15dp"
+            android:textColor="@color/primary"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:fontFamily="@font/blinker"
+            android:inputType="textPassword"
+            app:endIconMode="password_toggle"
+            app:errorEnabled="true"
+            app:hintAnimationEnabled="true"
+            android:text="@={viewModel.password}"
+            android:textSize="18dp"
+            />
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/blinker"
+            android:background="@drawable/buttom_staff"
+            android:layout_marginTop="20dp"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textSize="18dp"
+            android:onClick="@{()->viewModel.registerUser()}"
+            android:layout_gravity="center_horizontal"
+            android:drawableLeft="@drawable/register_icon"
+            android:theme="@style/Staff_Button"
+            android:textColor="@color/white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/blinker"
+                android:text="@string/account"
+                android:layout_marginTop="20dp"
+                android:textSize="18dp"
+                android:textColor="@color/secundary"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/sign_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/blinker"
+                android:text="@string/sign_in"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="18dp"
+                android:textColor="@color/primary"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/staff" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="20dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/back_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/blinker"
+                android:text="@string/returnwait"
+                android:textSize="18dp"
+                android:textColor="@color/secundary"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</layout>
