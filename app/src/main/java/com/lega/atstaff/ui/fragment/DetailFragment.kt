@@ -77,7 +77,7 @@ class DetailFragment: BaseFragmentDb<FragmentDetailBinding, DetailViewModel>() {
             personalPosition.setText(args.personal.position.toString())
         }
 
-        dataBinding.viewpager.adapter = ViewPageAdapter(this, list)
+        dataBinding.viewpager.adapter = ViewPageAdapter(this, list, args.personal.id)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

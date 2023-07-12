@@ -111,18 +111,10 @@ z
 Japp/src/main/java/com/lega/atstaff/domain/usecase/GetListLicenseUseCase.kt,4\a\4aaebf14d4f42c757e96d88beceea0a75b08c32f
 w
 Gapp/src/main/java/com/lega/atstaff/domain/usecase/GetListVisaUseCase.kt,2\0\20d703c1c46ff30ac584057695aba27674e9b074
-n
->app/src/main/java/com/lega/atstaff/ui/fragment/VisaFragment.kt,e\a\ead9d02e66de71e30143551839e5febb0946a452
 v
 Fapp/src/main/java/com/lega/atstaff/core/base/recycler/BaseRvAdapter.kt,c\0\c067ca0147a78afeb2ed703d0ab2b7d7d2fa4ff4
 ~
 Napp/src/main/java/com/lega/atstaff/core/base/recycler/BaseViewHolderBinding.kt,5\7\571cf4d40665543b00fce7077003b7ead15947ef
-o
-?app/src/main/java/com/lega/atstaff/core/base/ViewPageAdapter.kt,e\f\efc8bdce8d209733eb3a8e249865d808994cc3e8
-o
-?app/src/main/java/com/lega/atstaff/ui/fragment/TitleFragment.kt,e\4\e4c123c3fcb163d32156b51bc9dd4f23a013412e
-p
-@app/src/main/java/com/lega/atstaff/ui/fragment/CourseFragment.kt,c\0\c0f4ba6e19c8607ab4e2648f7be9bddfd05399ef
 g
 7app/src/main/java/com/lega/atstaff/ui/util/constants.kt,b\1\b1ed26e8e05813d5ed8300e61e3aad40a6131850
 @
@@ -151,8 +143,6 @@ j
 :app/src/main/java/com/lega/atstaff/data/api/ApiPersonal.kt,0\e\0eba234b8b4d3a4f4938e33042796bb277872e8c
 x
 Happ/src/main/java/com/lega/atstaff/data/datasource/PersonalDatasource.kt,c\f\cf7e97f1d7e40a6745c395f5f1fc1bf57b7072e6
-q
-Aapp/src/main/java/com/lega/atstaff/ui/fragment/LicenseFragment.kt,c\0\c02bbf240d5f69b2545f8d49bc605608904fb1d4
 y
 Iapp/src/main/java/com/lega/atstaff/domain/usecase/GetListCourseUseCase.kt,f\a\fa09033de1fcd9fa99018e86debf8c1734c1a3ac
 n

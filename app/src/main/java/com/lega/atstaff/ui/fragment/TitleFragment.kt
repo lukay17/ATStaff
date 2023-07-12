@@ -32,7 +32,7 @@ class TitleFragment : BaseFragmentDb<FragmentTilteBinding, DetailViewModel>() {
     }
 
     override fun initViewModels() {
-        viewModel.loadTitleList(prefs.getId())
+        arguments?.getInt("Id")?.let { viewModel.loadTitleList(it) }
     }
 
     override fun observeViewModels() {

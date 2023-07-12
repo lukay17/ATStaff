@@ -34,7 +34,7 @@ class VisaFragment : BaseFragmentDb<FragmentVisaBinding, DetailViewModel>() {
     }
 
     override fun initViewModels() {
-        viewModel.loadvisaList(prefs.getId())
+        arguments?.getInt("Id")?.let { viewModel.loadvisaList(it) }
     }
 
     override fun observeViewModels() {

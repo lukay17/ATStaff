@@ -36,7 +36,7 @@ class LicenseFragment : BaseFragmentDb<FragmentLicenseBinding, DetailViewModel>(
     }
 
     override fun initViewModels() {
-        viewModel.loadlicenseList(prefs.getId())
+        arguments?.getInt("Id")?.let { viewModel.loadlicenseList(it) }
     }
 
     override fun observeViewModels() {

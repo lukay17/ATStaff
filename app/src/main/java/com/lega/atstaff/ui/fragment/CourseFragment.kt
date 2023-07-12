@@ -32,7 +32,7 @@ class CourseFragment : BaseFragmentDb<FragmentCourseBinding, DetailViewModel>() 
     }
 
     override fun initViewModels() {
-        viewModel.loadCourseList(prefs.getId())
+        arguments?.getInt("Id")?.let { viewModel.loadCourseList(it) }
     }
 
     override fun observeViewModels() {
