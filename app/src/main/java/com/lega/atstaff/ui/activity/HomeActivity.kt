@@ -3,6 +3,7 @@ package com.lega.atstaff.ui.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -45,7 +46,7 @@ class HomeActivity  : AppCompatActivity() {
         var ab: ActionBar? = supportActionBar
         if(ab != null){
             ab.setHomeAsUpIndicator(R.drawable.ic_menu)
-            ab. setDisplayHomeAsUpEnabled(true)
+            ab.setDisplayHomeAsUpEnabled(true)
         }
     }
 
@@ -70,4 +71,5 @@ class HomeActivity  : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 }
+
 

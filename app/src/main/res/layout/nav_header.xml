@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_header"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -10,8 +10,7 @@
     android:orientation="vertical"
     android:clickable="true"
     android:focusable="true"
-    android:foreground="?attr/selectableItemBackgroundBorderless"
-    android:background="@color/primary">
+    android:foreground="?attr/selectableItemBackgroundBorderless">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/img_navHeader"
@@ -20,7 +19,9 @@
         android:contentDescription="Navegation Header"
         android:layout_gravity="center"
         android:paddingTop="5dp"
-        android:src="@drawable/avatar"/>
+        android:src="@drawable/avatar"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"/>
 
     <TextView
         android:id="@+id/name_navHeader"

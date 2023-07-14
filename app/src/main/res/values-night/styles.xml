@@ -6,4 +6,7 @@
         <item name="colorButtonNormal">@color/primary</item>
     </style>
 
+    <style name="EditTextThemeOverlay" parent="ThemeOverlay.AppCompat">
+        <item name="colorAccent">@color/primary</item>
+    </style>
 </resources>

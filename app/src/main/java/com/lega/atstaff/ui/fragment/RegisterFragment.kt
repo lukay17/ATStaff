@@ -7,6 +7,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import com.lega.atstaff.R
 import com.lega.atstaff.core.base.BaseFragmentDb
+import com.lega.atstaff.core.extension.isEmail
 import com.lega.atstaff.databinding.FragmentRegisterBinding
 import com.lega.atstaff.domain.models.User
 import com.lega.atstaff.ui.util.CustomSnackBar
@@ -39,12 +40,16 @@ class RegisterFragment : BaseFragmentDb<FragmentRegisterBinding, RegisterViewMod
     }
 
     override fun observeViewModels() {
-        viewModel.errorName.observe(viewLifecycleOwner, ::errorName)
         viewModel.user.observe(viewLifecycleOwner, ::registerSuccess)
+        viewModel.nulo.observe(viewLifecycleOwner, ::showAlert)
     }
 
     override fun showError(message: String?) {
         snackBar.Image(requireView(), message.toString(), 2)
+    }
+
+    private fun showAlert(message: String?){
+        snackBar.Image(requireView(), message.toString() , 4)
     }
 
     private fun registerSuccess(success: String?) {
@@ -64,22 +69,5 @@ class RegisterFragment : BaseFragmentDb<FragmentRegisterBinding, RegisterViewMod
             override fun handleOnBackPressed() { }
         })
     }
-
-    private fun errorEmail(isValid: Boolean?) {
-        isValid?.let {
-            when (isValid) {
-                true -> dataBinding.inputEmail.error = getString(R.string.email_error)
-                false -> dataBinding.inputEmail.error = null
-            }
-        }
-    }
-
-    private fun errorName(isValid: Boolean?) {
-        isValid?.let {
-            when (isValid) {
-                true -> dataBinding.inputName.error = getString(R.string.name_error)
-                false -> dataBinding.inputName.error = null
-            }
-        }
-    }
 }
+

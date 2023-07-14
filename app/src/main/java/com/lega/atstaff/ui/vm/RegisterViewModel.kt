@@ -4,13 +4,9 @@ import android.util.Log
 import androidx.lifecycle.*
 import com.lega.atstaff.core.base.BaseViewModel
 import com.lega.atstaff.core.base.SingleEvent
-import com.lega.atstaff.core.extension.combine
 import com.lega.atstaff.core.extension.isEmail
-import com.lega.atstaff.core.extension.isValidPass
-import com.lega.atstaff.domain.models.Personal
-import com.lega.atstaff.domain.models.User
 import com.lega.atstaff.domain.usecase.AddPersonalUseCase
-import com.lega.atstaff.domain.usecase.GetLogInUseCase
+import com.lega.atstaff.ui.util.CustomSnackBar
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.onCompletion
@@ -31,24 +27,45 @@ class RegisterViewModel  @Inject constructor(
     val email = MutableLiveData("")
     val username = MutableLiveData("")
     val password = MutableLiveData("")
-
-    val errorName = liveData<Boolean> {
-        if(name.value.toString().isBlank() || name.value.toString().length < 5)
-            Log.e(TAG, "PASO POR AQUI")
-            return@liveData
-    }
+    var snackBar: CustomSnackBar = CustomSnackBar()
 
     private val _user = MutableLiveData<String>()
     val user get() = _user
 
+    private val _isNull = MutableLiveData<String>()
+    val nulo get() = _isNull
+
         fun registerUser() {
-            viewModelScope.launch {
-                addPersonalUseCase.execute(AddPersonalUseCase.Params(name.value?:"", organization.value?:"", nationality.value?:"", email.value?:"",username.value?:"",password.value?:""))
-                    .onStart { _loading.value = true }
-                    .onCompletion { _loading.value = false }
-                    .catch { _error.value = SingleEvent(it) }
-                    .collect{ _user.value = it}
+            if (isEmptyOrNull(name.value?.toString()) == true) {
+               _isNull.value = "Name is required"
+            } else if (isEmptyOrNull(email.value?.toString()) == true) {
+                _isNull.value = "Email is required"
+            } else if (isEmptyOrNull(username.value?.toString()) == true){
+                _isNull.value = "Username is required"
+            }else if (isEmptyOrNull(password.value?.toString()) == true){
+                _isNull.value = "Password is required"
+            }else if (email.value?.toString()?.isEmail() == false){
+                _isNull.value = "Email is incorrect"
+            }else{
+                viewModelScope.launch {
+                    addPersonalUseCase.execute(AddPersonalUseCase.Params(name.value ?: "",
+                        organization.value ?: "",
+                        nationality.value ?: "",
+                        email.value ?: "",
+                        username.value ?: "",
+                        password.value ?: ""))
+                        .onStart { _loading.value = true }
+                        .onCompletion { _loading.value = false }
+                        .catch { _error.value = SingleEvent(it) }
+                        .collect { _user.value = it }
+                }
             }
+
         }
+
+    fun isEmptyOrNull(text: String?):Boolean{
+        return text == null || text.equals("") || text.isBlank()
     }
+}
+
 

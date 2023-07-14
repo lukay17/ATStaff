@@ -59,4 +59,5 @@
     <string name="returHome">Return to Home</string>
     <string name="id">ID</string>
     <string name="returDetail">Return to Detail</string>
+    <string name="required">Required</string>
 </resources>
