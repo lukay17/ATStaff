@@ -3,6 +3,7 @@ package com.lega.atstaff.ui.util;
 import android.content.Context;
 import android.graphics.drawable.GradientDrawable;
 import android.text.TextUtils;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -200,7 +201,7 @@ public class CustomToast extends Toast {
 
     public static Toast Default(@NonNull Context context, @NonNull String message) {
         Toast toast = new Toast(context);
-        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setDuration(Toast.LENGTH_LONG);
 
         View customLayout = LayoutInflater.from(context).inflate(R.layout.customtoast, (ViewGroup) null, false);
         LinearLayout llToastBg = customLayout.findViewById(R.id.custom_toast);
@@ -220,7 +221,7 @@ public class CustomToast extends Toast {
 
     public static Toast Success(@NonNull Context context, @NonNull String message, int shouldShowIcon) {
         final Toast toast = new Toast(context);
-        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setDuration(Toast.LENGTH_LONG);
 
         View customLayout = LayoutInflater.from(context).inflate(R.layout.customtoast, (ViewGroup) null, false);
         LinearLayout llToastBg = customLayout.findViewById(R.id.custom_toast);
@@ -241,12 +242,13 @@ public class CustomToast extends Toast {
 
     public static Toast Danger(@NonNull Context context, @NonNull String message, int shouldShowIcon) {
         Toast toast = new Toast(context);
-        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setDuration(Toast.LENGTH_LONG);
 
         View customLayout = LayoutInflater.from(context).inflate(R.layout.customtoast, (ViewGroup) null, false);
         LinearLayout llToastBg = customLayout.findViewById(R.id.custom_toast);
         ImageView imgType = customLayout.findViewById(R.id.imgType);
         TextView tvMessage = customLayout.findViewById(R.id.toastMessage);
+        tvMessage.setTextColor(R.color.txt_danger);
         GradientDrawable bgShape = (GradientDrawable) llToastBg.getBackground();
         tvMessage.setText(message);
 
@@ -256,12 +258,13 @@ public class CustomToast extends Toast {
         imgType.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_error));
 
         toast.setView(customLayout);
+
         return toast;
     }
 
     public static Toast Warning(@NonNull Context context,@NonNull String message, int shouldShowIcon) {
         Toast toast = new Toast(context);
-        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setDuration(Toast.LENGTH_LONG);
 
         View customLayout = LayoutInflater.from(context).inflate(R.layout.customtoast, (ViewGroup) null, false);
         LinearLayout llToastBg = customLayout.findViewById(R.id.custom_toast);
@@ -282,7 +285,7 @@ public class CustomToast extends Toast {
 
     public static Toast Info(@NonNull Context context, @NonNull String message, int shouldShowIcon) {
         Toast toast = new Toast(context);
-        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setDuration(Toast.LENGTH_LONG);
 
         View customLayout = LayoutInflater.from(context).inflate(R.layout.customtoast, (ViewGroup) null, false);
         LinearLayout llToastBg = customLayout.findViewById(R.id.custom_toast);

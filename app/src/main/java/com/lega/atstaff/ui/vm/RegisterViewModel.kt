@@ -5,6 +5,7 @@ import androidx.lifecycle.*
 import com.lega.atstaff.core.base.BaseViewModel
 import com.lega.atstaff.core.base.SingleEvent
 import com.lega.atstaff.core.extension.isEmail
+import com.lega.atstaff.core.extension.isEmptyOrNull
 import com.lega.atstaff.domain.usecase.AddPersonalUseCase
 import com.lega.atstaff.ui.util.CustomSnackBar
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -62,10 +63,6 @@ class RegisterViewModel  @Inject constructor(
             }
 
         }
-
-    fun isEmptyOrNull(text: String?):Boolean{
-        return text == null || text.equals("") || text.isBlank()
-    }
 }
 
 

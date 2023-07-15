@@ -6,13 +6,13 @@
     <color name="secundaryVariant">#EFF0F2</color>
     <color name="neutral">#000000</color>
 
-    <color name="danger">#d9534f</color>
+    <color name="danger">#FF4343</color>
     <color name="txt_danger">#AA0000</color>
 
-    <color name="warning">#80FF7300</color>
+    <color name="warning">#80E88331</color>
     <color name="txt_warning">#F13B00</color>
 
-    <color name="success">#5cb85c</color>
+    <color name="success">#C3DDBA</color>
     <color name="txt_success">#218100</color>
 
     <color name="info">#8000B7FF</color>
@@ -20,6 +20,5 @@
 
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
-
 
 </resources>

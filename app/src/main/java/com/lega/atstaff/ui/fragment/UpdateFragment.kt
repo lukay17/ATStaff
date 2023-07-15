@@ -39,7 +39,16 @@ class UpdateFragment : BaseFragmentDb<FragmentUpdateBinding, UpdateViewModel>() 
             viewModel.getPersonalId(args.personal.id)
             viewModel.persona.observe(viewLifecycleOwner, Observer { item ->
                 with(dataBinding){
-                    //inputId.text = item.id
+                    inputId.setText(item.id.toString())
+                    inputName.setText(item.name)
+                    inputDni.setText(item.dni)
+                    inputNationality.setText(item.nationality)
+                    inputOrganization.setText(item.organization)
+                    inputPosition.setText(item.position)
+                    inputTwitter.setText(item.twitter)
+                    inputFacebook.setText(item.facebook)
+                    inputLinkedin.setText(item.linkedin)
+                    inputPhone.setText(item.phone)
                 }
             })
         }
@@ -52,11 +61,11 @@ class UpdateFragment : BaseFragmentDb<FragmentUpdateBinding, UpdateViewModel>() 
 
     override fun observeViewModels() {
         viewModel.personal.observe(viewLifecycleOwner, ::updateSuccess)
-
+        viewModel.nulo.observe(viewLifecycleOwner, ::showError)
     }
 
     override fun showError(message: String?) {
-        snackBar.Image(requireView(), message.toString(), 2)
+        snackBar.Image(requireView(), message.toString(), 4)
     }
 
     private fun updateSuccess(success: String?) {
@@ -64,10 +73,10 @@ class UpdateFragment : BaseFragmentDb<FragmentUpdateBinding, UpdateViewModel>() 
             val directions = UpdateFragmentDirections.toDetailFragment(args.personal)
             navigate(directions)
         }else {
-            CustomToast.Danger(requireContext(),
-                "Unsuccessful Register, Please Try Again",
-                1).show()
+            CustomToast.Danger(requireContext(),"Unsuccessful Register, Please Try Again",1).show()
         }
     }
 
 }
+
+

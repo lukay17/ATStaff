@@ -15,6 +15,9 @@ fun PersonalResponse.matToPersonal() =
             nationality = it?.nationality  ?: "",
             organization = it?.organization ?:"",
             position = it?.position ?: "",
+            twitter = it?.twitter ?:"",
+            facebook = it?.facebook ?:"",
+            linkedin = it?.linkedin ?:"",
             phone = it?.phone ?:""
         )
     }.orEmpty()
@@ -27,6 +30,9 @@ fun Persona.matToPersonalId() = Personal(
     nationality = this?.nationality ?:"",
     organization = this?.organization?: "",
     position = this?.position ?:"",
+    twitter = this?.twitter ?:"",
+    facebook = this?.facebook ?:"",
+    linkedin = this?.linkedin ?:"",
     phone = this?.phone ?:""
 )
 

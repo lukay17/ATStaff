@@ -41,15 +41,11 @@ class RegisterFragment : BaseFragmentDb<FragmentRegisterBinding, RegisterViewMod
 
     override fun observeViewModels() {
         viewModel.user.observe(viewLifecycleOwner, ::registerSuccess)
-        viewModel.nulo.observe(viewLifecycleOwner, ::showAlert)
+        viewModel.nulo.observe(viewLifecycleOwner, ::showError)
     }
 
     override fun showError(message: String?) {
-        snackBar.Image(requireView(), message.toString(), 2)
-    }
-
-    private fun showAlert(message: String?){
-        snackBar.Image(requireView(), message.toString() , 4)
+        snackBar.Image(requireView(), message.toString(), 4)
     }
 
     private fun registerSuccess(success: String?) {

@@ -11,4 +11,7 @@ data class Personal(val id: Int,
                     val nationality:String,
                     val organization:String,
                     val position: String,
+                    val twitter: String,
+                    val facebook: String,
+                    val linkedin: String,
                     val phone: String): Parcelable

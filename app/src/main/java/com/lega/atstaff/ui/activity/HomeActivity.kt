@@ -1,12 +1,13 @@
 package com.lega.atstaff.ui.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.MenuItem
+import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.ActionBar
-import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -31,12 +32,20 @@ class HomeActivity  : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding?.root)
 
-        init()
         toolbar()
 
         if (args?.user != null) {
             //snackBar.Image(binding.navView, "Welcome " + args?.user!!.id_personal, 2)
             snackBar.Image(binding.navView, "Welcome ", 2)
+            val navView = LayoutInflater.from(this@HomeActivity).inflate(R.layout.nav_header,null as ViewGroup?, false)
+            val name = navView.findViewById<TextView>(R.id.name_navHeader)
+            name.setText(args.user?.user.toString())
+
+            val email = navView.findViewById<TextView>(R.id.email_navHeader)
+            email.setText(args.user?.email.toString())
+
+            val image = navView.findViewById<ImageView>(R.id.img_navHeader)
+            image.setImageResource(R.drawable.airframe)
         }
     }
 
@@ -50,15 +59,13 @@ class HomeActivity  : AppCompatActivity() {
         }
     }
 
-    fun init(){
-        binding.navView.setNavigationItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.nav_home -> snackBar.Image(binding.navView, "home", 1)
-                R.id.nav_profile -> snackBar.Image(binding.navView, "Profile", 2)
-                R.id.nav_logOut -> snackBar.Image(binding.navView, "salir", 2)
-            }
-            false
+    fun init() = binding.navView.setNavigationItemSelectedListener { item ->
+        when (item.itemId) {
+            R.id.nav_home -> snackBar.Image(binding.navView, "home", 1)
+            R.id.nav_profile -> snackBar.Image(binding.navView, "Profile", 2)
+            R.id.nav_logOut -> snackBar.Image(binding.navView, "salir", 2)
         }
+        false
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -70,6 +77,7 @@ class HomeActivity  : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
 }
 
 

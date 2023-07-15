@@ -25,6 +25,15 @@ data class Persona (
     @field:SerializedName("position")
     val position: String? = null,
 
+    @field:SerializedName("facebook")
+    val facebook: String? = null,
+
+    @field:SerializedName("twitter")
+    val twitter: String? = null,
+
+    @field:SerializedName("linkedin")
+    val linkedin: String? = null,
+
     @field:SerializedName("phone")
     val phone: String? = null
 )

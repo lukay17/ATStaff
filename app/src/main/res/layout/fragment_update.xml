@@ -47,6 +47,7 @@
                 android:layout_marginHorizontal="50dp"
                 android:hint="@string/hintName"
                 android:fontFamily="@font/blinker"
+                android:enabled="false"
                 android:text="@={viewModel.id}"
                 android:textSize="18dp"
                 />
