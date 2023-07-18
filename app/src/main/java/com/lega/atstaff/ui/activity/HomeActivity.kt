@@ -39,11 +39,9 @@ class HomeActivity  : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var navController: NavController
 
-    private val TAG: String = "MainActivity"
+    private val TAG: String = "HomeActivity"
     val args: HomeActivityArgs by navArgs()
     var snackBar: CustomSnackBar = CustomSnackBar()
-
-    val directions = HomeFragmentDirections
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
