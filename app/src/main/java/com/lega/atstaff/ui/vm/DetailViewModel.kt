@@ -19,7 +19,7 @@ class DetailViewModel  @Inject constructor(
     private val deletePersonalUseCase: DeletePersonalUseCase,
     private val personalIdUseCase: GetPersonalUseCase,
     private val titleUseCase: GetListTitleUseCase,
-    private val couseUseCase: GetListCourseUseCase,
+    private val courseUseCase: GetListCourseUseCase,
     private val licenseUseCase: GetListLicenseUseCase,
     private val visaUseCase: GetListVisaUseCase
 ) : BaseViewModel() {
@@ -73,7 +73,7 @@ class DetailViewModel  @Inject constructor(
 
     fun loadCourseList(userId: Int) {
         viewModelScope.launch {
-            couseUseCase.execute(GetListCourseUseCase.Params(userId))
+            courseUseCase.execute(GetListCourseUseCase.Params(userId))
                 .onStart { _loading.value = true }
                 .onCompletion { _loading.value = false }
                 .catch { _error.value = SingleEvent(it) }

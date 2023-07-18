@@ -1,0 +1,170 @@
+
+^
+java:S1192G"HDefine a constant instead of duplicating this literal "Success" 3 times.(¾ğõÛ
+n
+java:S1104"SMake PRIMARY a static final constant or non-public and provide accessors if needed.(‹ÊÇ¦øÿÿÿÿ
+i
+java:S1104"SMake SUCCESS a static final constant or non-public and provide accessors if needed.(¾Œş†
+n
+java:S1104"SMake WARNING a static final constant or non-public and provide accessors if needed.(••šäıÿÿÿÿ
+m
+java:S1104"RMake DANGER a static final constant or non-public and provide accessors if needed.(Œ„ÿ§üÿÿÿÿ
+k
+java:S1104"PMake INFO a static final constant or non-public and provide accessors if needed.(üõ²Ëşÿÿÿÿ
+i
+java:S1104!"SMake DEFAULT a static final constant or non-public and provide accessors if needed.(â˜à
+H
+java:S1444"-Make this "public static PRIMARY" field final(‹ÊÇ¦øÿÿÿÿ
+C
+java:S1444"-Make this "public static SUCCESS" field final(¾Œş†
+H
+java:S1444"-Make this "public static WARNING" field final(••šäıÿÿÿÿ
+G
+java:S1444",Make this "public static DANGER" field final(Œ„ÿ§üÿÿÿÿ
+E
+java:S1444"*Make this "public static INFO" field final(üõ²Ëşÿÿÿÿ
+C
+java:S1444!"-Make this "public static DEFAULT" field final(â˜à
+
+java:S26813"†This line will not be executed conditionally; only the first line of this 2-line block will be. The rest will execute unconditionally.(Šˆ”¦
+m
+java:S3008"RRename this field "PRIMARY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹ÊÇ¦øÿÿÿÿ
+h
+java:S3008"RRename this field "SUCCESS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾Œş†
+m
+java:S3008"RRename this field "WARNING" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(••šäıÿÿÿÿ
+l
+java:S3008"QRename this field "DANGER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œ„ÿ§üÿÿÿÿ
+j
+java:S3008"ORename this field "INFO" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(üõ²Ëşÿÿÿÿ
+h
+java:S3008!"RRename this field "DEFAULT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(â˜à
+o
+java:S1845Ê"SRename method "Default" to prevent any misunderstanding/clash with field "DEFAULT".(¨Öüüÿÿÿÿ
+j
+java:S1845Ş"SRename method "Success" to prevent any misunderstanding/clash with field "SUCCESS".(ÆÎ–š
+m
+java:S1845ó"QRename method "Danger" to prevent any misunderstanding/clash with field "DANGER".(‹½Åúÿÿÿÿ
+j
+java:S1845‰"SRename method "Warning" to prevent any misunderstanding/clash with field "WARNING".(¤ÛÂæ
+i
+java:S1845"MRename method "Info" to prevent any misunderstanding/clash with field "INFO".(†“áğÿÿÿÿÿ
+g
+java:S3776'"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(’†¢
+F
+java:S18747"0Remove this use of "getColor"; it is deprecated.(²Ì›ç
+F
+java:S18748"0Remove this use of "getColor"; it is deprecated.(òÀìÄ
+N
+java:S1874:"3Remove this use of "getDrawable"; it is deprecated.(€º»òşÿÿÿÿ
+K
+java:S1874A"0Remove this use of "getColor"; it is deprecated.(’Ü­ûÿÿÿÿ
+F
+java:S1874B"0Remove this use of "getColor"; it is deprecated.(òÀìÄ
+N
+java:S1874D"3Remove this use of "getDrawable"; it is deprecated.(Æ‘ÏÌşÿÿÿÿ
+F
+java:S1874L"0Remove this use of "getColor"; it is deprecated.(ƒƒ“š
+F
+java:S1874M"0Remove this use of "getColor"; it is deprecated.(òÀìÄ
+I
+java:S1874O"3Remove this use of "getDrawable"; it is deprecated.(”¨Õè
+K
+java:S1874V"0Remove this use of "getColor"; it is deprecated.(»åõµùÿÿÿÿ
+F
+java:S1874W"0Remove this use of "getColor"; it is deprecated.(òÀìÄ
+H
+java:S1874Y"3Remove this use of "getDrawable"; it is deprecated.(‘—$
+F
+java:S1874`"0Remove this use of "getColor"; it is deprecated.(ÎÇµƒ
+F
+java:S1874a"0Remove this use of "getColor"; it is deprecated.(òÀìÄ
+N
+java:S1874c"3Remove this use of "getDrawable"; it is deprecated.(€º»òşÿÿÿÿ
+F
+java:S1874k"0Remove this use of "getColor"; it is deprecated.(Í¿İÎ
+F
+java:S1874l"0Remove this use of "getColor"; it is deprecated.(òÀìÄ
+E
+java:S1874t"/Remove this use of "setView"; it is deprecated.(ñÕ´Ê
+h
+java:S3776x"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(¶ÿ¶ï
+G
+java:S1874Š"0Remove this use of "getColor"; it is deprecated.(²Ì›ç
+G
+java:S1874‹"0Remove this use of "getColor"; it is deprecated.(òÀìÄ
+O
+java:S1874"3Remove this use of "getDrawable"; it is deprecated.(€º»òşÿÿÿÿ
+L
+java:S1874”"0Remove this use of "getColor"; it is deprecated.(’Ü­ûÿÿÿÿ
+G
+java:S1874•"0Remove this use of "getColor"; it is deprecated.(òÀìÄ
+O
+java:S1874—"3Remove this use of "getDrawable"; it is deprecated.(Æ‘ÏÌşÿÿÿÿ
+G
+java:S1874"0Remove this use of "getColor"; it is deprecated.(ƒƒ“š
+G
+java:S1874Ÿ"0Remove this use of "getColor"; it is deprecated.(òÀìÄ
+J
+java:S1874¡"3Remove this use of "getDrawable"; it is deprecated.(”¨Õè
+L
+java:S1874¨"0Remove this use of "getColor"; it is deprecated.(»åõµùÿÿÿÿ
+G
+java:S1874©"0Remove this use of "getColor"; it is deprecated.(òÀìÄ
+I
+java:S1874«"3Remove this use of "getDrawable"; it is deprecated.(‘—$
+G
+java:S1874²"0Remove this use of "getColor"; it is deprecated.(ÎÇµƒ
+G
+java:S1874³"0Remove this use of "getColor"; it is deprecated.(òÀìÄ
+O
+java:S1874µ"3Remove this use of "getDrawable"; it is deprecated.(€º»òşÿÿÿÿ
+G
+java:S1874½"0Remove this use of "getColor"; it is deprecated.(Í¿İÎ
+G
+java:S1874¾"0Remove this use of "getColor"; it is deprecated.(òÀìÄ
+F
+java:S1874Æ"/Remove this use of "setView"; it is deprecated.(ñÕ´Ê
+i	java:S100Ê"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨Öüüÿÿÿÿ
+G
+java:S1874Ö"0Remove this use of "getColor"; it is deprecated.(Í¿İÎ
+G
+java:S1874×"0Remove this use of "getColor"; it is deprecated.(òÀìÄ
+F
+java:S1874Ú"/Remove this use of "setView"; it is deprecated.(ñÕ´Ê
+d	java:S100Ş"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÎ–š
+L
+java:S1874é"0Remove this use of "getColor"; it is deprecated.(’Ü­ûÿÿÿÿ
+G
+java:S1874ê"0Remove this use of "getColor"; it is deprecated.(òÀìÄ
+O
+java:S1874ì"3Remove this use of "getDrawable"; it is deprecated.(Æ‘ÏÌşÿÿÿÿ
+F
+java:S1874î"/Remove this use of "setView"; it is deprecated.(ñÕ´Ê
+i	java:S100ó"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹½Åúÿÿÿÿ
+G
+java:S1874ÿ"0Remove this use of "getColor"; it is deprecated.(ƒƒ“š
+G
+java:S1874€"0Remove this use of "getColor"; it is deprecated.(òÀìÄ
+J
+java:S1874‚"3Remove this use of "getDrawable"; it is deprecated.(”¨Õè
+F
+java:S1874„"/Remove this use of "setView"; it is deprecated.(ñÕ´Ê
+d	java:S100‰"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤ÛÂæ
+L
+java:S1874–"0Remove this use of "getColor"; it is deprecated.(»åõµùÿÿÿÿ
+G
+java:S1874—"0Remove this use of "getColor"; it is deprecated.(òÀìÄ
+I
+java:S1874˜"3Remove this use of "getDrawable"; it is deprecated.(‘—$
+F
+java:S1874š"/Remove this use of "setView"; it is deprecated.(ñÕ´Ê
+i	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†“áğÿÿÿÿÿ
+G
+java:S1874ª"0Remove this use of "getColor"; it is deprecated.(ÎÇµƒ
+G
+java:S1874«"0Remove this use of "getColor"; it is deprecated.(òÀìÄ
+O
+java:S1874¬"3Remove this use of "getDrawable"; it is deprecated.(€º»òşÿÿÿÿ
+F
+java:S1874®"/Remove this use of "setView"; it is deprecated.(ñÕ´Ê

@@ -4,6 +4,7 @@
     android:id="@+id/nav_header"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="50dp"
     android:gravity="bottom"
     android:padding="16dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
@@ -12,7 +13,9 @@
     android:focusable="true"
     android:foreground="?attr/selectableItemBackgroundBorderless">
 
-    <androidx.appcompat.widget.AppCompatImageView
+    <!-- Imagen de perfil -->
+
+    <!--<androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/img_navHeader"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -21,8 +24,19 @@
         android:paddingTop="5dp"
         android:src="@drawable/avatar"
         app:cardCornerRadius="8dp"
-        app:cardElevation="8dp"/>
+        app:cardElevation="8dp"/>-->
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_navHeader"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/avatar"
+        app:border_color="@color/primary"
+        app:border_width="1dp"
+        />
+
+    <!-- Nombre de Usuario -->
     <TextView
         android:id="@+id/name_navHeader"
         android:layout_width="match_parent"
@@ -36,6 +50,7 @@
         android:textColor="@color/secundary"
         />
 
+    <!-- Email de Usuario -->
     <TextView
         android:id="@+id/email_navHeader"
         android:layout_width="match_parent"

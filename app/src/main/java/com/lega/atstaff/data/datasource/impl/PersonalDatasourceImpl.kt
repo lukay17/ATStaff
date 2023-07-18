@@ -13,22 +13,18 @@ class PersonalDatasourceImpl @Inject constructor(
 ): PersonalDatasource {
 
     override fun getListPersonal(): Flow<PersonalResponse> = flow {
-        delay(2000)
         emit(apiPersonal.getListPersonal())
     }
 
     override fun getPersoanlId(userId: Int): Flow<Persona> =flow {
-        delay(2000)
         emit(apiPersonal.getPersonalId(userId))
     }
 
     override fun deletePersonal(userId: Int): Flow<Persona> = flow {
-        delay(2000)
         emit(apiPersonal.deletePersonal(userId))
     }
 
     override fun updatePersonal(id: String, name: String,  dni: String, nationality: String,  organization: String, position: String, twitter: String, facebook: String, linkedin: String, phone: String): Flow<String> = flow {
-        delay(2000)
         emit(apiPersonal.updatePersonal(mapOf("id" to id,"name" to name, "dni" to dni, "nationality" to nationality, "organization" to organization,  "position" to position, "twitter" to twitter, "facebook" to facebook, "linkedin" to linkedin, "phone"  to phone )))
     }
 

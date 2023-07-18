@@ -60,5 +60,6 @@
             app:argType="com.lega.atstaff.domain.models.User"
             app:nullable="true"
             android:defaultValue="@null" />
+
     </activity>
 </navigation>

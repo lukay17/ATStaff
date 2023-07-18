@@ -13,17 +13,14 @@ class LoginDatasourceImpl @Inject constructor(
 ): LoginDatasource {
 
     override fun logIng(user:String, password:String): Flow<UserResponse>  = flow {
-        delay(2000)
         emit(apiLogin.logInUser(mapOf("username" to user, "password" to password )))
     }
 
     override fun getUserId(userId: Int): Flow<UserResponse> =flow {
-        delay(2000)
         emit(apiLogin.getUserId(userId))
     }
 
     override fun registerPersonal(name:String, organization:String, nationality:String, email:String, user:String, password:String): Flow<String>  = flow {
-        delay(2000)
         emit(apiLogin.registerPersonal(mapOf("name" to name, "organization" to organization, "nationality" to nationality, "email" to email, "username" to user, "password" to password )))
     }
 }

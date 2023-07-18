@@ -5,5 +5,6 @@ data class UserResponse(
     val password:String?,
     val email:String?,
     val role:Int?,
-    val id_personal:Int?)
+    val id_personal:Int?,
+    val img:String?)
 

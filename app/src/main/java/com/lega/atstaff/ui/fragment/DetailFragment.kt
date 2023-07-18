@@ -5,6 +5,7 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.LinearLayout
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
@@ -16,8 +17,6 @@ import com.lega.atstaff.core.base.BaseFragmentDb
 import com.lega.atstaff.core.base.ViewPageAdapter
 import com.lega.atstaff.core.extension.loadImage
 import com.lega.atstaff.databinding.FragmentDetailBinding
-import com.lega.atstaff.domain.models.Personal
-import com.lega.atstaff.ui.util.CustomToast
 import com.lega.atstaff.ui.vm.DetailViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -40,31 +39,9 @@ class DetailFragment: BaseFragmentDb<FragmentDetailBinding, DetailViewModel>() {
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object : OnBackPressedCallback(true){
             override fun handleOnBackPressed() {
                 val directions = DetailFragmentDirections.toHomeFragment()
-                navigate(directions) }
+                navigate(directions)
+            }
         })
-
-        dataBinding.theEnd.setOnClickListener {
-            val builder = AlertDialog.Builder(requireContext())
-            builder.setMessage("Are you sure close application?")
-                .setPositiveButton("Yes", DialogInterface.OnClickListener { dialog, which ->
-                    prefs.wipeUser()
-                    System.exit(0)
-                    val intent = Intent(Intent.ACTION_MAIN)
-                    intent.addCategory(Intent.CATEGORY_HOME)
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                    startActivity(intent)
-                    //activity?.finish()
-                })
-                .setNegativeButton("No", DialogInterface.OnClickListener { dialog, which ->
-                    dialog.dismiss()
-                })
-            builder.show()
-        }
-
-        dataBinding.profile.setOnClickListener {
-            val directions = DetailFragmentDirections.toUpdateFragment(args.personal)
-            navigate(directions)
-        }
     }
 
     override fun initViewModels() {

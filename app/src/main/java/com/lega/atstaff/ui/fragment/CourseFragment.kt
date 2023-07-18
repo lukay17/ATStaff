@@ -1,7 +1,6 @@
 package com.lega.atstaff.ui.fragment
 
 import androidx.fragment.app.viewModels
-import com.lega.atstaff.ATStaffApp.Companion.prefs
 import com.lega.atstaff.R
 import com.lega.atstaff.core.base.BaseFragmentDb
 import com.lega.atstaff.core.base.recycler.BaseRvAdapter
@@ -27,12 +26,10 @@ class CourseFragment : BaseFragmentDb<FragmentCourseBinding, DetailViewModel>() 
         }
     }
 
-    override fun eventListeners() {
-        dataBinding.courseRV.adapter = adapterCourse
-    }
-
     override fun initViewModels() {
         arguments?.getInt("Id")?.let { viewModel.loadCourseList(it) }
+        dataBinding.courseRV.adapter?.notifyDataSetChanged()
+        dataBinding.courseRV.adapter = adapterCourse
     }
 
     override fun observeViewModels() {

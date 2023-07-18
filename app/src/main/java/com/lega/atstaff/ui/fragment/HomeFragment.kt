@@ -29,6 +29,7 @@ class HomeFragment : BaseFragmentDb<FragmentHomeBinding, HomeViewModel>() {
     var snackBar: CustomSnackBar = CustomSnackBar()
     val TAG:String = "HomeFragement"
 
+
     private val adapter by lazy {
         BaseRvAdapter<Personal>(R.layout.item_personal_list){ personal ->
             personal?.let {
@@ -81,7 +82,6 @@ class HomeFragment : BaseFragmentDb<FragmentHomeBinding, HomeViewModel>() {
         viewModel.personalList.observe(viewLifecycleOwner){
             adapter.items = it
         }
-
         viewModel.persona.observe(viewLifecycleOwner, ::personaSucess)
     }
 

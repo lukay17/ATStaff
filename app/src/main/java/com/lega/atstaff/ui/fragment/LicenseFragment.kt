@@ -31,12 +31,10 @@ class LicenseFragment : BaseFragmentDb<FragmentLicenseBinding, DetailViewModel>(
         }
     }
 
-    override fun eventListeners() {
-        dataBinding.licenseRV.adapter = adapterLicense
-    }
-
     override fun initViewModels() {
         arguments?.getInt("Id")?.let { viewModel.loadlicenseList(it) }
+        dataBinding.licenseRV.adapter?.notifyDataSetChanged()
+        dataBinding.licenseRV.adapter = adapterLicense
     }
 
     override fun observeViewModels() {

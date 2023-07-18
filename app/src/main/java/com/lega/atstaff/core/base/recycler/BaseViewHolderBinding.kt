@@ -9,8 +9,7 @@ class BaseViewHolderBinding(val viewmodel: BaseViewModel?, val binding: ViewData
     fun bind(item:Any?){
         binding.setVariable(BR.viewModel,viewmodel)
         binding.setVariable(BR.item, item)
-        //binding.setVariable(4,viewmodel)
-        //binding.setVariable(2, item)
         binding.executePendingBindings()
+        binding.notifyChange()
     }
 }

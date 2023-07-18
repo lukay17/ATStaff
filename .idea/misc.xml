@@ -12,18 +12,21 @@
         <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.481" />
         <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/drawable/ic_error.xml" value="0.403" />
         <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/drawable/ic_home.xml" value="0.361" />
-        <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/layout/activity_home.xml" value="0.29907407407407405" />
+        <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/drawable/ic_menu.xml" value="0.366" />
+        <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/layout/activity_home.xml" value="0.39791666666666664" />
         <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/layout/activity_login.xml" value="0.6333333333333333" />
-        <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/layout/bar_main.xml" value="0.6770833333333334" />
+        <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/layout/bar_main.xml" value="0.1" />
         <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/layout/customtoast.xml" value="0.45208333333333334" />
         <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/layout/fragment_course.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/layout/fragment_detail.xml" value="0.45208333333333334" />
         <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/layout/fragment_home.xml" value="0.45208333333333334" />
         <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/layout/fragment_license.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/layout/fragment_login.xml" value="0.37395833333333334" />
+        <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/layout/fragment_pdf.xml" value="0.6885416666666667" />
         <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/layout/fragment_register.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/layout/fragment_tilte.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/layout/fragment_update.xml" value="0.6175925925925926" />
+        <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/layout/fragment_view_p_d_f.xml" value="0.6770833333333334" />
         <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/layout/fragment_visa.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/layout/fragment_wait.xml" value="0.37395833333333334" />
         <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/layout/item_course_list.xml" value="0.6333333333333333" />
@@ -35,7 +38,7 @@
         <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/layout/layout_viewpager.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/layout/nav_header.xml" value="0.6203703703703703" />
         <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/layout/toolbar.xml" value="0.6322916666666667" />
-        <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/menu/menu_activity.xml" value="0.9239583333333333" />
+        <entry key="..\:/Users/lukay/AndroidStudioProjects/ATStaff/app/src/main/res/menu/menu_activity.xml" value="0.6564814814814814" />
       </map>
     </option>
   </component>

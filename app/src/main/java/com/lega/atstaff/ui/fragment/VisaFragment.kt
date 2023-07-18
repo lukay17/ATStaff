@@ -29,12 +29,10 @@ class VisaFragment : BaseFragmentDb<FragmentVisaBinding, DetailViewModel>() {
         }
     }
 
-    override fun eventListeners() {
-        dataBinding.visaRV.adapter = adapterVisa
-    }
-
     override fun initViewModels() {
         arguments?.getInt("Id")?.let { viewModel.loadvisaList(it) }
+        dataBinding.visaRV.adapter?.notifyDataSetChanged()
+        dataBinding.visaRV.adapter = adapterVisa
     }
 
     override fun observeViewModels() {

@@ -14,6 +14,10 @@
         <action
             android:id="@+id/to_detailFragment"
             app:destination="@id/detailFragment" />
+
+        <action
+            android:id="@+id/to_updateFragment"
+            app:destination="@id/updateFragment" />
     </fragment>
 
     <fragment
@@ -29,24 +33,54 @@
         <action
             android:id="@+id/to_homeFragment"
             app:destination="@id/homeFragment" />
+
         <action
-            android:id="@+id/to_updateFragment"
-            app:destination="@id/updateFragment" />
+            android:id="@+id/to_pdfFragment"
+            app:destination="@id/pdfFragment" />
+        <action
+            android:id="@+id/to_viewPDFFragment"
+            app:destination="@id/viewPDFFragment" />
+
     </fragment>
 
     <fragment
-        android:id="@+id/updateFragment"
-        android:name="com.lega.atstaff.ui.fragment.UpdateFragment"
-        android:label="fragment_update"
-        tools:layout="@layout/fragment_update" >
+        android:id="@+id/viewPDFFragment"
+        android:name="com.lega.atstaff.ui.fragment.ViewPDFFragment"
+        android:label="ViewPDFFragment"
+        tools:layout="@layout/fragment_view_p_d_f">
 
         <argument
-            android:name="personal"
-            app:argType="com.lega.atstaff.domain.models.Personal" />
+            android:name="pdf"
+            app:argType="string"
+            android:defaultValue=""/>
         <action
             android:id="@+id/to_detailFragment"
             app:destination="@id/detailFragment" />
 
+    </fragment>
+    <fragment
+        android:id="@+id/pdfFragment"
+        android:name="com.lega.atstaff.ui.fragment.PdfFragment"
+        android:label="PdfFragment" >
 
+        <argument
+            android:name="pdf"
+            app:argType="string"
+            android:defaultValue=""/>
+
+        <action
+            android:id="@+id/to_detailFragment"
+            app:destination="@id/detailFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.lega.atstaff.ui.fragment.UpdateFragment"
+        android:label="UpdateFragment"
+        tools:layout="@layout/fragment_update">
+
+        <action
+            android:id="@+id/to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>

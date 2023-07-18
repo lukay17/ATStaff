@@ -11,7 +11,8 @@ fun UserResponse.mapToUser() = User(
     password = this.password?:"",
     email = this.email ?: "sin email",
     role = this.role ?: -1,
-    id_personal = this.id_personal ?: -1
+    id_personal = this.id_personal ?: -1,
+    img = this.img?:""
 )
 
 

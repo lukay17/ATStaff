@@ -120,30 +120,6 @@
                     android:textColor="@color/black"
                     android:fontFamily="@font/blinker"
                     tools:text="HOTEL UNO" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-                        <androidx.appcompat.widget.AppCompatButton
-                            android:id="@+id/theEnd"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="salir"
-                            android:fontFamily="@font/blinker"
-                            android:textSize="12dp"
-                            android:textStyle="bold"/>
-
-                        <androidx.appcompat.widget.AppCompatButton
-                            android:id="@+id/profile"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/update"
-                            android:fontFamily="@font/blinker"
-                            android:textSize="12dp"
-                            android:textStyle="bold"/>
-
-                    </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>
@@ -152,15 +128,19 @@
             android:id="@+id/tabLayout"
             android:background="@drawable/buttom_staff"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
             app:tabTextColor="@color/secundary"
+            app:tabTextAppearance="@style/TextAppearance.AppCompat.Body2"
             app:tabIndicatorColor="@color/secundaryVariant"
+            app:tabMaxWidth="100dp"
         />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewpager"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            />
 
     </LinearLayout>
 

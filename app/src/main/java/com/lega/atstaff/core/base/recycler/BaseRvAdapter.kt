@@ -3,18 +3,19 @@ package com.lega.atstaff.core.base.recycler
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.databinding.library.baseAdapters.BR
 import androidx.recyclerview.widget.RecyclerView
 import com.lega.atstaff.core.base.BaseViewModel
 import com.lega.atstaff.core.extension.autoNotify
 import kotlin.properties.Delegates
-import androidx.databinding.library.baseAdapters.BR
+
 
 typealias OnClickItem<T> = ((T?) -> Unit)
 class BaseRvAdapter<T : Any>(
     private val dataview: Int,
     items: List<T>? = emptyList(),
     private val viewmodel: BaseViewModel? = null,
-    private val itemClick: OnClickItem<T>
+    private val itemClick: OnClickItem<T>,
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     var items: List<T> by Delegates.observable(items ?: emptyList()) { _, old, new ->
@@ -36,8 +37,6 @@ class BaseRvAdapter<T : Any>(
         if (holder is BaseViewHolderBinding) {
             holder.binding.setVariable(BR.adapter, this)
             holder.binding.setVariable(BR.position, position)
-            //holder.binding.setVariable(1, this)
-            //holder.binding.setVariable(3, position)
             holder.bind(items[position])
             holder.itemView.setOnClickListener { _ ->
                 itemClick(items[position])
@@ -53,6 +52,7 @@ class BaseRvAdapter<T : Any>(
         this.items = content
         notifyDataSetChanged()
     }
+
 }
 
 

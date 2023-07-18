@@ -6,6 +6,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
+import com.lega.atstaff.ATStaffApp
 import com.lega.atstaff.R
 import com.lega.atstaff.core.base.BaseFragmentDb
 import com.lega.atstaff.databinding.FragmentUpdateBinding
@@ -21,12 +22,11 @@ class UpdateFragment : BaseFragmentDb<FragmentUpdateBinding, UpdateViewModel>() 
     override val viewModel: UpdateViewModel by viewModels()
     val TAG:String = "UpdateFragement"
     var snackBar: CustomSnackBar = CustomSnackBar()
-    val args: UpdateFragmentArgs by navArgs()
 
     override fun eventListeners() {
-        dataBinding.backPage.setOnClickListener {
-            val directions = UpdateFragmentDirections.toDetailFragment(args.personal)
-            Navigation.findNavController(it).navigate(directions)
+       dataBinding.backPage.setOnClickListener {
+            val directions = UpdateFragmentDirections.toHomeFragment()
+            navigate(directions)
         }
 
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object : OnBackPressedCallback(true){
@@ -34,9 +34,8 @@ class UpdateFragment : BaseFragmentDb<FragmentUpdateBinding, UpdateViewModel>() 
         })
     }
 
-    override fun initViewModels() {
-        if(args.personal.id > 0 && args.personal.id != null){
-            viewModel.getPersonalId(args.personal.id)
+   override fun initViewModels() {
+            viewModel.getPersonalId(ATStaffApp.prefs.getId())
             viewModel.persona.observe(viewLifecycleOwner, Observer { item ->
                 with(dataBinding){
                     inputId.setText(item.id.toString())
@@ -51,7 +50,6 @@ class UpdateFragment : BaseFragmentDb<FragmentUpdateBinding, UpdateViewModel>() 
                     inputPhone.setText(item.phone)
                 }
             })
-        }
     }
 
     override fun setBindingLayout() {
@@ -70,7 +68,7 @@ class UpdateFragment : BaseFragmentDb<FragmentUpdateBinding, UpdateViewModel>() 
 
     private fun updateSuccess(success: String?) {
         if (success?.toString() == "success") {
-            val directions = UpdateFragmentDirections.toDetailFragment(args.personal)
+            val directions = UpdateFragmentDirections.toHomeFragment()
             navigate(directions)
         }else {
             CustomToast.Danger(requireContext(),"Unsuccessful Register, Please Try Again",1).show()
